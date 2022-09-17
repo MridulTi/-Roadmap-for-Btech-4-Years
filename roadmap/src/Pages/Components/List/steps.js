@@ -1,10 +1,132 @@
 import {Link} from "react-router-dom"
-const Check=""
-let prevV="";
+import React,{Component} from "react"
+let information;
+function handleinformation(value){
+    if((value=='CS')||(value=='Coding')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }else if((value=='Design')||(value=='Graphics')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }
+    else if((value=='')||(value=='')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div>
+                <h2>Sorry ! I do't have any info about anything like that !</h2>
+                <h3> Though here is a link to Tech twitter you can ask people out there.
+                    <br/><a href="https://twitter.com/i/communities/1472105760389668865">Tech Twitter</a>
+                </h3>
+            </div>
+        )
+    }
+}
+function handleinternship(value){
+    if((value=='CS')||(value=='Coding')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }else if((value=='Design')||(value=='Graphics')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }
+    else if((value=='')||(value=='')){
+        return(
+            <div>
+                <h2><a href="#">Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+                <h2><a>Kunal Kushwaha</a></h2>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div>
+                <h2>Sorry ! I do't have any info about anything like that !</h2>
+                <h3> Though here is a link to Tech twitter you can ask people out there.
+                    <br/><a href="https://twitter.com/i/communities/1472105760389668865">Tech Twitter</a>
+                </h3>
+            </div>
+        )
+    }
+}
+class Info extends Component {
+    componentDidMount() {
+      const { previousStep } = this.props;
+      
+      information=handleinformation(previousStep.value);
+    //   this.props.triggerNextStep({ trigger: '11'});
+    }
+  
+    render() {
+      return (
+        <div>
+            <h3>Here are few people you can contact on various platforms for guidance</h3>
+            {information}
+        </div>
+      );
+    }
+  }
+  class Check extends Component {
+    componentDidMount() {
+      const { previousStep } = this.props;
+      const q= previousStep.value;
+      let url=`https://serpapi.com/search.json?engine=google&q=${q}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data =>{
+                information=data;
+            })
+            .catch(err=>{`error ${err}`});
+    //   information=handleinternship(previousStep.value);
+    //   this.props.triggerNextStep({ trigger: '11'});
+    }
+  
+    render() {
+      return (
+        <div>
+            {information}
+        </div>
+      );
+    }
+  }
 export default [
     {
         id: '1',
-        message: 'Hello World',
+        message: "Hello ,What's your name",
         trigger: '2',
     },
     {
@@ -29,13 +151,13 @@ export default [
             { value: 1, label: 'Nothing,Thanks', trigger: '5' },
             { value: 2, label: 'Studies', trigger: '5.1' },
             { value: 3, label: 'Internships', trigger: '5.2' },
-            { value: 4, label: 'Guidance from Experienced one', trigger: '9' },
+            { value: 4, label: 'Guidance', trigger: '9' },
           ],
     },
     {
         id:'5',
         message:"Ok then,Bye!",
-        end:true,
+        trigger:"end-cov"
     },
     {
         id:'5.1',
@@ -59,12 +181,22 @@ export default [
     },
     {
         id: '7',
+        options: [
+            { value: 1, label: 'Engineering', trigger: '8.1' },
+            { value: 2, label: 'Doctorate', trigger: '8.2' },
+            { value: 3, label: 'Lawyer', trigger: '8.3' },
+            { value: 4, label: 'Designing', trigger: '8.4' },
+            { value: 5, label: 'Something Else?', trigger: '7.1' },
+          ],
+    },
+    {
+        id:'7.1',
         user:true,
-        trigger:'check',
+        trigger:'check'
     },
     {
         id: 'check',
-        component:{Check}
+        component:<Check/>,
     },
     
     {
@@ -101,16 +233,8 @@ export default [
     },
     {
         id: '10',
-        component:
-        <div>
-            {console.log(prevV)}
-            {((prevV=='CS')||(prevV=='Computer Science')||(prevV=='Coding')) && <div>
-                <h2>Here is the List of people you can talk with</h2>
-                <li>Kunal Kushwaha</li>
-                <li>Code with Harry</li>
-                <li>Tech Twitter</li>
-            </div>}
-        </div>
+        component:<Info/>,
+        trigger:'11'
     },
     {
         id: '9',
@@ -120,21 +244,23 @@ export default [
     {
         id:'9.1',
         user:true,
-        trigger: ({ value, steps }) => {
-            console.log(steps);
-
-              if(value ==="Get a Quote"){
-                return "4"
-              }
+        placeholder:'Enter Field Name',
+        trigger:'10'
     },
     {
         id: '11',
-        message: 'What is the a study course you want to know about?',
+        message: 'Anything more?',
+        trigger:'4'
+    },
+    {
+        id: '12',
+        message: 'Anything more?',
+        trigger:'4'
     }
     ,{
-        id:'12',
-        message:"I am Sorry I don't have enough data to help you with that right now.",
-        trigger:'5'
+        id:'end-cov',
+        user:true,
+        trigger:'3.1'
     }
     
 ]
