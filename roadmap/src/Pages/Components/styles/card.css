@@ -1,0 +1,17 @@
+.card{
+    width: 15vw;
+    overflow: hidden;
+    background-color: white;
+    padding:5% 2% 2%;
+    margin: 2% 0%;
+}
+.card>p{
+    padding: 5% 0%;
+
+}
+.card>div{
+    width: 3rem;
+    height: 4vh;
+    margin: 0% 0% 5%; 
+    border: 0.2rem solid blue;
+}

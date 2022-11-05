@@ -1,7 +1,12 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import ReactDOM from "react-dom"
 import ChatbotE from "../Chatbotreact/chatbotEng.js";
+import joblist from "./Components/List/joblist.js";
+import Stats from "./Components/stats.js";
+import Card from "./Components/Card.js";
 import "./Components/styles/Engineer.css"
+import studylist from "./Components/List/studylist.js";
 export default function Engineer(){
     const[job,changejob]=React.useState(false);
     const[study,changestudy]=React.useState(false);
@@ -12,11 +17,26 @@ export default function Engineer(){
     const[FS,changeFS]=React.useState(false);
     const[UX,changeUX]=React.useState(false);
 
+    const jobb=joblist.map(data=>{
+        return(
+            <Card 
+            funct={eval(data.func)}
+            {...data}/>
+        )
+    })
+    const studdy=studylist.map(data=>{
+        return(
+            <Card 
+            funct={eval(data.func)}
+            {...data}/>
+        )
+    })
     function handlejob(){
         if(job==true){
             changejob(false);
         }else{
             changejob(true);
+            window.scrollTo(0,100);
         }
     }
     function handlestudy(){
@@ -27,10 +47,13 @@ export default function Engineer(){
         }
     }
     function handleBE(){
+        
+        console.log("Hel")
         if(BE==true){
             changeBE(false);
         }else{
             changeBE(true);
+            
         }
     }
     function handleFE(){
@@ -71,43 +94,48 @@ export default function Engineer(){
 
     return(
         <div>
-            <h1>HELOhndgjhndgjhndjkhnOOW!</h1>
-            <h1>ENGINER</h1>
-            <p>gjnfjdgnjdfngjf</p>
+            <div className="head-flex">
+                <div>
+                <h1>Find Your Dream Engineering Carrer with</h1><h1>CG</h1>
+                {/* <Stats/> */}
+                <img src="Images/Group_15.png"/>
+                </div>
+                <div className="head-img"><img src="Images/head-img.svg"/></div>
+            </div>
+            <div className="head-info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <div>
-                <button onClick={handlejob}>Job Specific</button>
-                <button onClick={handlestudy}>Study Specific</button>
+                <button onClick={handlejob} className="bttn">Job Specific</button>
+                <button onClick={handlestudy} className="bttn">Study Specific</button>
 
             </div>
             <ChatbotE/>
             {/* branch */}
-            {job&& <div>
-                <div>
-                    <button onClick={handleBE}>Backend</button>
-                    <button onClick={handleFE}>FrontEnd</button>
-                    <button onClick={handleDO}>Devops</button>
-                    <button onClick={handleDR}>Devrel</button>
-                    <button onClick={handleFS}>FullStack</button>
-                    <button onClick={handleUX}>UI/UX Design</button>
+            {job&& <div className="job-head">
+                <h2>Explore Jobs by category</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</p>
+                <div className="job">
+                    {jobb}
                     
                 </div>
             </div>}
-                {BE&&<div id="CS-IT" className="branch">
+                {BE&&job&&<div id="BE" className="branch">
                     <h1>CS-IT</h1>
                 </div>}
-                {FE&&<div id="ECE" className="branch">
+                {FE&& job&&<div id="ECE" className="branch">
                     <h1>ECE</h1>
                 </div>}
-                {DO&&<div id="ME" className="branch">
+                {DO&&job&&<div id="ME" className="branch">
                     <h1>ME</h1>
                 </div>}
-                {DR&&<div id="CL" className="branch">
+                {DR&&job&&<div id="CL" className="branch">
                     <h1>CL</h1>
                 </div>}
-                {FS&&<div id="CL" className="branch">
+                {FS&&job&&<div id="CL" className="branch">
                     <h1>CL</h1>
                 </div>}
-                {UX&&<div id="CL" className="branch">
+                {UX&&job&&<div id="CL" className="branch">
                     <h1>CL</h1>
                 </div>}
                 {/* <div>
@@ -133,21 +161,33 @@ export default function Engineer(){
                         <div></div>
                     </div>
             </div> */}
-            {study&& <div>
-                
-                <div id="CS-IT" className="branch">
-                    <h1>1st Sem</h1>
+            {study&& <div className="job-head">
+                <h2>Explore Study Info by category</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</p>
+                <div className="job">
+                    {studdy}
+                    
                 </div>
-                <div id="ECE" className="branch">
+            </div>}
+                {BE&&study&&<div id="CS-IT" className="branch">
+                    <h1>CS-IT</h1>
+                </div>}
+                {FE&& study&&<div id="ECE" className="branch">
                     <h1>ECE</h1>
-                </div>
-                <div id="ME" className="branch">
+                </div>}
+                {DO&&job&&<div id="ME" className="branch">
                     <h1>ME</h1>
-                </div>
-                <div id="CL" className="branch">
+                </div>}
+                {DR&&study&&<div id="CL" className="branch">
                     <h1>CL</h1>
-                </div>
-                <div>
+                </div>}
+                {FS&&study&&<div id="CL" className="branch">
+                    <h1>CL</h1>
+                </div>}
+                {UX&&study&&<div id="CL" className="branch">
+                    <h1>CL</h1>
+                </div>}
+                {/* <div>
                     <h1>Internships</h1>
                     <div id="CS-intern" className="intern">
                         <h2>CS-IT</h2>
@@ -169,8 +209,7 @@ export default function Engineer(){
                         <div></div>
                         <div></div>
                     </div>
-                </div>
-            </div>}
+                </div> */}
             
 
         </div>

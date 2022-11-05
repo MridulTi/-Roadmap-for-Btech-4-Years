@@ -5,6 +5,62 @@
   scroll-behavior: smooth;
 
 }
+.head-flex{
+  padding: 2%;
+  display: flex;
+  gap: 35rem;
+  width: 100vw;
+}
+.head-img{
+  margin: 2% 0%;
+  width: 5vw;
+  height: 60vh;
+  background-color: rgb(93, 158, 243);
+
+}
+.job-head{
+  background-color: whitesmoke;
+  padding:2% 10%;
+}
+.job-head>h2{
+  font-size: 2rem;
+}
+.job-head>p{
+  padding: 1% 0%;
+  width: 30vw;
+}
+.job{
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-areas:"a b c"
+  "d e f" ;
+  padding:2% 0%;
+}
+.head-info{
+  position: absolute;
+  top: 50%;
+  left:40%;
+  z-index: 99;
+  border: 0.2rem solid black;
+  padding:2% 2%;
+  background-color: whitesmoke;
+  width: 25vw;
+}
 .intern{
   height: 100vh;
+}
+.bttn{
+  margin: 5% 2%;
+  color: white;
+  background-color: rgb(255, 114, 62);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 5vh;
+  border:0rem;
+  opacity: 0.8;
+  border-radius:1rem;
+  width:10vw;
+}
+.bttn:hover{
+  opacity: 1;
 }
