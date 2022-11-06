@@ -110,7 +110,7 @@ class Info extends Component {
             .then(data =>{
                 information=data;
             })
-            .catch(err=>{`error ${err}`});
+            // .catch(err=>{`error ${err}`});
     //   information=handleinternship(previousStep.value);
     //   this.props.triggerNextStep({ trigger: '11'});
     }
@@ -194,10 +194,10 @@ export default [
         user:true,
         trigger:'check'
     },
-    {
-        id: 'check',
-        component:<Check/>,
-    },
+    // {
+    //     id: 'check',
+    //     component:<Check/>,
+    // },
     
     {
         id: '8.1',

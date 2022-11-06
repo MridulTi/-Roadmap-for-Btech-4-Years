@@ -7,6 +7,7 @@ import Stats from "./Components/stats.js";
 import Card from "./Components/Card.js";
 import "./Components/styles/Engineer.css"
 import studylist from "./Components/List/studylist.js";
+import { HashLink } from "react-router-hash-link";
 export default function Engineer(){
     const[job,changejob]=React.useState(false);
     const[study,changestudy]=React.useState(false);
@@ -106,13 +107,13 @@ export default function Engineer(){
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div>
-                <button onClick={handlejob} className="bttn">Job Specific</button>
-                <button onClick={handlestudy} className="bttn">Study Specific</button>
+                <HashLink to="#job-specific"><button onClick={handlejob} className="bttn">Job Specific</button></HashLink>
+                <HashLink to="#study-specific"><button onClick={handlestudy} className="bttn">Study Specific</button></HashLink>
 
             </div>
             <ChatbotE/>
             {/* branch */}
-            {job&& <div className="job-head">
+            {job&& <div className="job-head" id="job-specific">
                 <h2>Explore Jobs by category</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</p>
                 <div className="job">
@@ -123,19 +124,19 @@ export default function Engineer(){
                 {BE&&job&&<div id="BE" className="branch">
                     <h1>CS-IT</h1>
                 </div>}
-                {FE&& job&&<div id="ECE" className="branch">
+                {FE&& job&&<div id="FE" className="branch">
                     <h1>ECE</h1>
                 </div>}
-                {DO&&job&&<div id="ME" className="branch">
+                {DO&&job&&<div id="DO" className="branch">
                     <h1>ME</h1>
                 </div>}
-                {DR&&job&&<div id="CL" className="branch">
+                {DR&&job&&<div id="DR" className="branch">
                     <h1>CL</h1>
                 </div>}
-                {FS&&job&&<div id="CL" className="branch">
+                {FS&&job&&<div id="FS" className="branch">
                     <h1>CL</h1>
                 </div>}
-                {UX&&job&&<div id="CL" className="branch">
+                {UX&&job&&<div id="UX" className="branch">
                     <h1>CL</h1>
                 </div>}
                 {/* <div>
@@ -161,7 +162,7 @@ export default function Engineer(){
                         <div></div>
                     </div>
             </div> */}
-            {study&& <div className="job-head">
+            {study&& <div className="job-head" id="study-specific">
                 <h2>Explore Study Info by category</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</p>
                 <div className="job">
