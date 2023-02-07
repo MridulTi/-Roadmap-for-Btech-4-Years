@@ -1,15 +1,32 @@
 .branch{
-    height: 100vh;
+  text-align: center;
+    /* height: 100vh; */
+    /* background-color: whites; */
+}
+.branch>img{
+  /* background-color: whitesmoke; */
+  margin: 0% 35%;
+  width:30vw;
 }
 *{
   scroll-behavior: smooth;
 
 }
 .head-flex{
-  padding: 2%;
+  background-image: url("/public/Images/engineer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* padding: 2%; */
   display: flex;
   gap: 35rem;
   width: 100vw;
+  height: 100vh;
+}
+.head-header{
+  background-color: #00b4d49c;
+  /* background-color: #00B3D4; */
+  /* opacity: 0.65; */
 }
 .head-img{
   margin: 2% 0%;
@@ -21,9 +38,18 @@
 .job-head{
   background-color: whitesmoke;
   padding:2% 10%;
+  height: 70vh;
 }
 .job-head>h2{
   font-size: 2rem;
+}
+.eng-button{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  background-color: whitesmoke;
+  padding: 2% 0%;
 }
 .job-head>p{
   padding: 1% 0%;
@@ -32,8 +58,8 @@
 .job{
   background-color: whitesmoke;
   display: grid;
-  grid-template-areas:"a b c"
-  "d e f" ;
+  grid-template: auto 0.5fr / auto auto auto;
+  gap: 5%;
   padding:2% 0%;
 }
 .head-info{
@@ -45,6 +71,9 @@
   padding:2% 2%;
   background-color: whitesmoke;
   width: 25vw;
+}
+#study-specific{
+  height: 90vh;
 }
 .intern{
   height: 100vh;
@@ -64,3 +93,30 @@
 .bttn:hover{
   opacity: 1;
 }
+.head-header{
+  padding: 4% 2% ;
+  color: #ffffff;
+}
+.header-para{
+  width: 50%;
+  padding-bottom: 2%;
+  font-size: 1.3rem;
+}
+.head-header>div{
+  font-size: 4rem;
+  display: flex;
+}
+.common-button {
+  border-radius: 2rem;
+  border: 0;
+  font-size: large;
+  font-weight: 600;
+  display: flex;
+  background-color: #ffcb9b;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8209912300109863rem 1.2314868927001954rem;
+  gap: 1.026239013671875rem;
+  }

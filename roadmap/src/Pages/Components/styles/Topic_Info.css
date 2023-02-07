@@ -1,0 +1,38 @@
+.topic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5230769157409667rem 3.0461538314819334rem;
+    gap: 3.0461538314819334rem;
+  }
+  .rectangle-topic {
+    height: 106px;
+    width: 106px;
+    border: 0.3807692289352417rem solid #fffae1;
+  }
+  .frame-topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-topic-title {
+    text-align: center;
+    vertical-align: top;
+    font-size: 24px;
+    font-family: Raleway;
+    line-height: 32%;
+    color: #000000;
+  }
+  .text-topic-info {
+    text-align: center;
+    vertical-align: top;
+    font-size: 26.653846740722656px;
+    font-family: Raleway;
+    letter-spacing: 0.25%;
+    line-height: 38.07692337036133%;
+    color: #784800;
+  }
+  
+  

@@ -1,7 +1,7 @@
 *{
   font-family: "Raleway",sans-serif;
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
   
 }
@@ -33,9 +33,11 @@
   z-index: 99;
 }
 .head-img{
-  width: 35vw;
+  width: 30vw;
+  background-color: none;
 }
 .mid-m>div{
+  padding-left: 5%;
   display: flex;
   width: 12vw;
   gap: 0;
@@ -48,9 +50,23 @@
   background-color: white;
   border: 0.2rem solid black;
 }
+.hero>img{
+  position: absolute;
+  width: 20vw;
+}
+.curves{
+  position: absolute;
+  top:0;
+  margin-top: -5%;
+  z-index: -1;
+  width: 100vw;
+}
 .mid-m>h2{
   text-align: center;
   font-size: 2.5rem;
+}
+.side-hero{
+  padding: 0% 62%;
 }
 .mid-m>div>div>p{
   padding: 5% 0%;
@@ -72,4 +88,53 @@
   color: black;
   
   background-color: orangered;
+}
+.background-hero{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/public/Images/background-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-clr{
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.6;
+  background-color: #00B3D4;
+}
+.About{
+  width: 100vw;
+  height: 100vh;
+}
+.Tutorial{
+  width: 100vw;
+  height: 80vh;
+}
+.Footer{
+  width: 100vw;
+  /* height: 50vh; */
+  background-image: url("/public/Images/footer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cards-container{
+  background-color: whitesmoke;
+  padding: 2% 0%;
+  width: 100vw;
+  height: 100vh;
+}
+.cards-container>h1{
+  font-size: 3rem;
+  padding-bottom: 2%;
+  font-weight: 400;
+  font-family: Raleway;
+  text-align: center;
+}
+.Cards{
+  display: grid;
+  grid-template: auto 0.5fr / auto auto auto auto;
+  gap: 2%;
+  justify-content: center;
 }

@@ -192,7 +192,7 @@ export default [
     {
         id:'7.1',
         user:true,
-        trigger:'check'
+        // trigger:'check'
     },
     // {
     //     id: 'check',

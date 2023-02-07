@@ -1,0 +1,50 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    width: 100vw;
+    gap: 80.02rem;
+    background-color: #00B3D4;
+    opacity: 0.8;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+  .text-name {
+    text-align: left;
+    vertical-align: top;
+    font-size: 24px;
+    line-height: 32%;
+    color: #ffffff;
+  }
+  .nav-bar-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .text-nav{
+    text-align: left;
+    vertical-align: top;
+    font-size: 16px;
+    letter-spacing: 0.5%;
+    line-height: 24%;
+    color: #ffffff;
+  }

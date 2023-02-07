@@ -1,0 +1,101 @@
+.carrer-guidance-hero {
+  background-color: #00b4d49c;
+
+
+  /* opacity: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10rem 10rem 19rem;
+  }
+  .title-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 0.2978492736816406rem; */
+  }
+  .text-cg-C {
+    text-align: center;
+    /* vertical-align: top; */
+    font-size: 20rem;
+    font-weight: 600;
+    font-family: Raleway ;
+    /* line-height: 65.52684020996094%; */
+    color: #ffffff;
+  }
+  .title-tagline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  /* .text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 1rem;
+    font-family: Raleway;
+    /* line-height: 59.569854736328125%;
+    color: #ffffff;
+  } */
+  .text-cg-name {
+    text-align: left;
+    vertical-align: top;
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: Raleway;
+    line-height: 50%;
+    color: #ffffff;
+  }
+  .contentand-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0rem 2rem 0rem;
+    /* gap: 5rem; */
+  }
+  .text-cg-subtitle {
+    /* text-align: left; */
+    /* vertical-align: top; */
+    font-size: 3rem;
+    /* padding-top: 2%; */
+    font-family: Raleway;
+    /* letter-spacing: 0.25%; */
+    /* line-height: 100%; */
+    color: #ffffff;
+  }
+  .text-cg-info{
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 0rem 7.5rem;
+    font-family: Raleway;
+    color: #ffffff;
+  }
+  .common-cg-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1.4892463684082031rem;
+    background-color: #ffcb9b;
+  }
+  .text-cg-btn {
+    text-align: left;
+    vertical-align: top;
+    font-size: 1.5rem;
+    font-family: Raleway;
+    /* letter-spacing: 0.5%; */
+    /* line-height: 35.741912841796875%; */
+    color: #784800;
+  }

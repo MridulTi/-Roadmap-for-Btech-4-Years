@@ -1,0 +1,13 @@
+.Topic-infor{
+    height: 80vh;
+    padding: 5% 10% 0%;
+    text-align: center;
+    background-color: #FFCB9B;
+}
+.FD{
+    width: 100vw;
+    justify-content: space-around;
+}
+.FD>img{
+    height: 150vh;
+}

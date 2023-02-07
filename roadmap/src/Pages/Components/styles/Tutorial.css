@@ -1,0 +1,87 @@
+.tutorial {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #f4f4f4; */
+  }
+  .tutorial-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 0.3743037462234497rem; */
+  }
+  .tutorial-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1.8715187072753907rem;
+    gap: 1.4972149848937988rem;
+  }
+  .tutorial-text>hr{
+    width: 5rem;
+    border: 0.2rem solid yellow;
+    color: yellow;
+  }
+  .text-tut-head {
+    text-align: center;
+    /* vertical-align: top; */
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: Raleway;
+    /* line-height: 67.37467193603516%; */
+    color: #000000;
+  }
+  .text-tut-subhead {
+    text-align: left;
+    vertical-align: top;
+    font-size: 1rem;
+    font-family: Raleway;
+    /* letter-spacing: 0.5%; */
+    /* line-height: 24%; */
+    color: #000000;
+  }
+  .youtube-video{
+    /* width: 100vw;justify-content: center; */
+  }
+  .img-youtube{
+    /* border-radius: 3.0501937866210938rem; */
+    height: 40vh;
+    justify-content: center;
+    width: 35vw;
+    background-color: whitesmoke;
+  }
+  .topic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 20rem;
+    gap: 2.6120845794677736rem;
+  }
+  .frame-tut-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-tut-job {
+    text-align: center;
+    vertical-align: top;
+    font-size: 39.18126678466797px;
+    font-family: Raleway;
+    /* line-height: 52.24169158935547%; */
+    color: #ffffff;
+  }
+  .text-tut-content {
+    text-align: center;
+    vertical-align: top;
+    font-size: 22.85573959350586px;
+    font-family: Raleway;
+    /* letter-spacing: 0.25%; */
+    /* line-height: 32.651058197021484%; */
+    color: #000000;
+  }

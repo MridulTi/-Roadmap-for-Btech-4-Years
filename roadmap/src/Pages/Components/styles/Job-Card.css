@@ -1,0 +1,88 @@
+.jobcard {
+    /* border-radius: 1.0719546318054198rem; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.12);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.5rem 1.0719546318054198rem;
+    gap: 1.0719546318054198rem;
+    background-color: #ffffff;
+  }
+  .frame-job-card {
+    border-radius: 1.0719546318054198rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0rem 1.0719546318054198rem;
+    gap: 2.1439092636108397rem;
+  }
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.0719546318054198rem;
+  }
+  .card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2.1439092636108397rem 0rem 0.26798865795135496rem 0rem;
+    gap: 1.0719546318054198rem;
+  }
+  .text-job-title {
+    text-align: left;
+    vertical-align: top;
+    font-size: 32.15863800048828px;
+    font-weight: 600;
+    font-family: Raleway;
+    line-height: 42.8781852722168%;
+    color: #000000;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .text-job-subhead {
+    width: 15vw;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.9rem;
+    font-family: Raleway;
+    /* letter-spacing: 0.4000000059604645%; */
+    /* line-height: 21.4390926361084%; */
+    color: #000000;
+  }
+  .rectangle-job {
+    height: 107px;
+    width: 107px;
+    background-color: #d9d9d9;
+  }
+  .text-button {
+    /* border-radius: 2.6798866271972654rem; */
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.0719546318054198rem 1.607931900024414rem;
+    /* gap: 1.3399433135986327rem; */
+  }
+  .Click-Here{
+    text-align: left;
+    vertical-align: top;
+    font-size: 21.4390926361084px;
+    font-family: Raleway;
+    letter-spacing: 0.5%;
+    line-height: 32.15863800048828%;
+    color: #000000;
+  }
+  #Coming-soon{
+    opacity: 0.3;
+  }
+  
